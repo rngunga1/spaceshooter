@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SpaceShooter.js app</title>
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #status {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 20vh;
+            text-align: center;
+            z-index: 100;
+            color: white;
+        }
+
+        #estado {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 30%;
+            height: 20vh;
+            margin: auto;
+            font-family: "Gill Sans", sans-serif;
+            padding: 5%;
+
+        }
+
+        #pause {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            height: 50vh;
+            text-align: center;
+            z-index: 100;
+            color: white;
+        }
+
+        #menu-pause {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 100px;
+            width: 50%;
+            height: 50vh;
+            margin: auto;
+            font-family: "Gill Sans", sans-serif;
+            padding: 40px;
+        }
+
+        #start {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            height: 50vh;
+            text-align: center;
+            z-index: 100;
+            color: white;
+        }
+
+        #menu-start {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 100px;
+            width: 50%;
+            height: 50vh;
+            margin: auto;
+            font-family: "Gill Sans", sans-serif;
+            padding: 40px;
+        }
+
+
+
+        .menu-btn {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="corpo">
+        <div id="status">
+            <div id="estado"></div>
+        </div>
+        <div id="pause"></div>
+    </div>
+
+
+
+    <script src="js/NaveHeroi.js"></script>
+    <script src="js/NaveVilao.js"></script>
+    <script src="js/Plano.js"></script>
+    <script src="js/Estrelas.js"></script>
+    <script src="js/Iluminacao.js"></script>
+    <script src="js/status.js"></script>
+    <script src="js/start.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script src="js/three.js"></script>
+    <script src="js/cena.js"></script>
+    <script src="js/orbit.js"></script>
+
+
+    <script>
+        init();
+        animate();
+    </script>
+</body>
+
+</html>
