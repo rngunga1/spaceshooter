@@ -1,4 +1,15 @@
 # spaceshooter
+# Link do jogo
+https://rngunga1.github.io/spaceshooter/
+
+# Como jogar
+Utilize as setas para mover a nave
+Barra de espaço para disparar, Q, W E para alternar entre os canhões
+A nave do inimigo destroi depois de dois acertos
+O player morre depois de 3 acertos
+Teclas 1-4 para alterar os holofotes
+Teclas 5, 6, 7, 8, 0 Trocar de câmeras
+
 # Obervação
 Para abrir sem o link é necessario um servidor local , sugerimos o liveserver
 # CG-ISPTEC
