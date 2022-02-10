@@ -15,7 +15,7 @@ class Menu {
             titulo = "BEM-VINDO";
             nomeBtn = "INICIAR";
         }
-        
+
         d.innerHTML = "<div id='menu-pause'><h2>"+ titulo +"</h2></div>"
         this.startButton(nomeBtn);
         if(!start)
@@ -63,8 +63,9 @@ class Menu {
         button.onclick = () => {
             this.play();
             this.isPlaying = true;
-            animate();
             this.reload = true;
+            animate();
+            
             //scene = backupScene;
         }
     }
