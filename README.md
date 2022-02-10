@@ -1,4 +1,17 @@
 # spaceshooter
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+/**
+ * @author 20180811@isptec.co.ao (Budy Vieira)
+ * @author 20171342@isptec.co.ao (Denise Teixeira)
+ * @author 20181339@isptec.co.ao (Pérsida Baila)
+ * @author 20180163@isptec.co.ao (Rafael Ngunga)
+ * 
+ * @co_autor liriosnoop@gmail.com (Lírio Ramalheira) 
+ */
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # Link do jogo
 https://rngunga1.github.io/spaceshooter/
 
