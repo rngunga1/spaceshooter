@@ -145,29 +145,7 @@ uma projecção perspectiva que mostre toda a cena usando a tecla
 ‘5’ assim como uma câmara fixa, activada usando a tecla ‘6’, que
 está centrada a nave herói utilizando uma projecção ortogonal por
 forma a visualizar a ilusão óptica pretendida. [1 valores]
-# Nota Importante
-# Nota1: As alterações das feitas relativas a entrega anterior contam para esta
-entrega. (Cameras, colições e a cena).
-# Nota 2: As teclas para acionar as cameras podem e outras opções podem ser
-padronizadas por vocês.
-# Sugestões
-1. Antes de definirem os materiais da cena, sugerimos que comecem por fazer
-algumas experiências com um objecto e material simples por forma a
-poderem testar e perceber os vários parâmetros individualmente.
-2. Para obter bons resultados na iluminação de grandes superfícies, estas
-devem ser subdivididas em polígonos mais pequenos.
-3. Quem a cena não tem paredes precisa adicionar.
-4. A partir de three.js.r69, para orientar uma fonte de luz do tipo spotlight (ou
-um outro qualquer tipo de luz orientável) para um ponto não basta atribuir a
-Light.target.position as coordenadas desse ponto. É ainda necessário ter antes
-incluído Light.target na cena (por exemplo, scene.add(mySpot.target); ) ou
-aplicar a Light.target a função updateMatrixWorld todas as vezes que se altera 
-a posição do ponto para o qual a luz a ponta
-(myLight.target.updateMatrixWorld();). A documentação constante de
-“Learning Three.js – the JavaScript 3D library for WebGL (2nd edition)”
-envolvendo a criação de um objecto-alvo fictício está desactualizada e deixou
-2de ser suportada pelas versões posteriores à versão three.js.r69. Para mais
-informação consultar https://github.com/mrdoob/three.js/issues/5555.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Avaliação IV
@@ -206,25 +184,3 @@ um ou mais hits. No final depois de todas as naves inimigas
 destruidas deve aparecer a mensagem de fim de jogo com a opção
 de reiniciar o jogo ou sair. [1.0 valor]
 
-Nota Importante
-Nota1:
-As texturas do chão ou outras adicionais são escolhidas pelo grupo e
-depois apresentadas e explicadas no relatorio.
-As alterações das feitas relativas a entrega anterior contam para esta entrega.
-(Cameras, colições e a cena).
-A lógica do jogo pode ser extentida por exemplo adicionar timer, número de
-naves abatidas, niveis de jogo e etc.
-As teclas para acionar as cameras podem e outras opções podem ser
-padronizadas por vocês.
-Sugestões
-1. Todas as texturas devem reagir à iluminação;
-2. Para a utilização de texturas em modo local é necessário
-configurar as permissões do navegador. O problema e a solução
-encontram-se descritos na documentação do three.js.
-https://threejs.org/docs/#manual/introduction/How-to-run-thing-locally
-3. Para realizar a pausa basta “congelar” o tempo. Para este efeito
-bastará o uso de poucas linhas de código.
-4. A mensagem de pausa deve ficar sobre o jogo e pode ser
-conseguida através da uma aplicação de uma textura a um objeto.
-2Pode-se recorrer à utilização de uma segunda projeção ortogonal e
-um segundo viewport.
