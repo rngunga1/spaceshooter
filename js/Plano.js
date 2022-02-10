@@ -70,7 +70,7 @@ class Plano {
     /* Plano da frente */
     let planoFront = new THREE.Mesh(
       new THREE.PlaneGeometry(this.largura, this.altura),
-      new THREE.MeshLambertMaterial({
+      new THREE.MeshBasicMaterial({
         side: THREE.DoubleSide,
         color: "#0a0826",
       })
@@ -99,7 +99,7 @@ class Plano {
     /* Plano de cima */
     let planoTopo = new THREE.Mesh(
       new THREE.PlaneGeometry(this.largura, 1000),
-      new THREE.MeshBasicMaterial({
+      new THREE.MeshLambertMaterial({
         //color: '#0a0826'
         color: "black",
         side: THREE.DoubleSide,
