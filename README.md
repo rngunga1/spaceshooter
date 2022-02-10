@@ -1,4 +1,6 @@
 # spaceshooter
+# Obervação
+Para abrir sem o link é necessario um servidor local , sugerimos o liveserver
 # CG-ISPTEC
 Trabalho de CG
 
