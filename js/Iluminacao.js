@@ -2,16 +2,16 @@ class Iluminacao {
   constructor() {
     //Holofotes
     this.holofote1 = new Holofote();
-    this.holofote1.position.set(500, 600, -500);
+    this.holofote1.position.set(500, 400, -500);
 
     this.holofote2 = new Holofote();
-    this.holofote2.position.set(500, 600, 500);
+    this.holofote2.position.set(500, 400, 500);
 
     this.holofote3 = new Holofote();
-    this.holofote3.position.set(-500, 600, -500);
+    this.holofote3.position.set(-500, 400, -500);
 
     this.holofote4 = new Holofote();
-    this.holofote4.position.set(-500, 600, 500);
+    this.holofote4.position.set(-500, 400, 500);
 
     //Iluminacao global
     this.iluminacaoGlobal = new THREE.DirectionalLight(0xffffff, 1);
@@ -68,25 +68,25 @@ class Iluminacao {
   onOffHolofote(id) {
     if (id == 1) {
       this.holofote1.children[2].intensity == 0
-        ? ((this.holofote1.children[2].intensity = 15),
+        ? ((this.holofote1.children[2].intensity = 3),
           this.holofote1.children[0].material.color.set("white"))
         : ((this.holofote1.children[2].intensity = 0),
           this.holofote1.children[0].material.color.set("black"));
     } else if (id == 2) {
       this.holofote2.children[2].intensity == 0
-        ? ((this.holofote2.children[2].intensity = 15),
+        ? ((this.holofote2.children[2].intensity = 3),
           this.holofote2.children[0].material.color.set("white"))
         : ((this.holofote2.children[2].intensity = 0),
           this.holofote2.children[0].material.color.set("black"));
     } else if (id == 3) {
       this.holofote3.children[2].intensity == 0
-        ? ((this.holofote3.children[2].intensity = 15),
+        ? ((this.holofote3.children[2].intensity = 3),
           this.holofote3.children[0].material.color.set("white"))
         : ((this.holofote3.children[2].intensity = 0),
           this.holofote3.children[0].material.color.set("black"));
     } else {
       this.holofote4.children[2].intensity == 0
-        ? ((this.holofote4.children[2].intensity = 15),
+        ? ((this.holofote4.children[2].intensity = 3),
           this.holofote4.children[0].material.color.set("white"))
         : ((this.holofote4.children[2].intensity = 0),
           this.holofote4.children[0].material.color.set("black"));
@@ -161,7 +161,7 @@ class Holofote {
     corpo.position.set(0, 15, 0);
     holofote.add(corpo);
 
-    let spotLight = new THREE.SpotLight("white", 20, 700, 90);
+    let spotLight = new THREE.SpotLight("white", 3, 700, 90);
     spotLight.position.set(0, -30, 0);
     holofote.add(spotLight);
     scene.add(holofote);

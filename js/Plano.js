@@ -8,9 +8,12 @@ class Plano {
     this.altura = 200;
     this.monalisa = new THREE.TextureLoader().load("./assets/monalisa.jpg");
     this.o_grito = new THREE.TextureLoader().load("./assets/o_grito.jpg");
-    this.chaoBase = new THREE.TextureLoader().load("./assets/Metal_Plate_009_COLOR.jpg");
-    this.chaoNorm = new THREE.TextureLoader().load("./assets/Metal_Plate_009_NORM.jpg");
-    this.chaoDisp = new THREE.TextureLoader().load("./assets/Metal_Tiles_003_height.png");
+    this.chaoBase = new THREE.TextureLoader().load(
+      "./assets/Metal_Plate_009_COLOR.jpg"
+    );
+    this.chaoNorm = new THREE.TextureLoader().load(
+      "./assets/Metal_Plate_009_NORM.jpg"
+    );
 
     this.createPlano();
 
@@ -24,23 +27,22 @@ class Plano {
     this.planoEsquerdaBox = {
       zMax: this.planoEsquerda.position.z,
       zMin: this.planoEsquerda.position.z,
-    }
+    };
 
     this.planoDireitaBox = {
       zMax: this.planoDireita.position.z,
-      zMin: this.planoDireita.position.z
-    }
+      zMin: this.planoDireita.position.z,
+    };
 
     this.planoFrenteBox = {
       xMax: this.planoFrente.position.x,
-      xMin: this.planoFrente.position.x
-    }
+      xMin: this.planoFrente.position.x,
+    };
 
     this.planoTrasBox = {
       xMax: this.planoTras.position.x,
-      xMin: this.planoTras.position.x
-    }
-
+      xMin: this.planoTras.position.x,
+    };
 
     this.isReflecting = true;
 
@@ -64,15 +66,13 @@ class Plano {
     planoL.geometry.computeBoundingBox();
 
     this.planoEsquerda = planoL;
-    
-
 
     /* Plano da frente */
     let planoFront = new THREE.Mesh(
       new THREE.PlaneGeometry(this.largura, this.altura),
       new THREE.MeshLambertMaterial({
         side: THREE.DoubleSide,
-        color: '#0a0826',
+        color: "#0a0826",
       })
     );
     planoFront.geometry.computeBoundingBox();
@@ -113,14 +113,11 @@ class Plano {
     /* Plano de baixo*/
     let bottomPlane = new THREE.Mesh(
       new THREE.PlaneGeometry(this.largura, this.largura, 512, 512),
-      new THREE.MeshLambertMaterial({
+      new THREE.MeshPhongMaterial({
         // color: "grey",
         side: THREE.DoubleSide,
         map: this.chaoBase,
-        //bumpMap: this.chaoNorm,
-        normalScale: 1.5,
-        normalMap: this.chaoNorm,
-        //displacementMap: this.chaoDisp,
+        bumpMap: this.chaoNorm,
       })
     );
     bottomPlane.rotateX(THREE.Math.degToRad(90));
@@ -151,17 +148,17 @@ class Plano {
       normalScale: 1.5,
       normalMap: this.chaoNorm,
       //displacementMap: this.chaoDisp,
-    })
+    });
 
     this.planoDireita.material = new THREE.MeshBasicMaterial({
       map: this.o_grito,
       side: THREE.DoubleSide,
-    })
+    });
 
     this.planoEsquerda.material = new THREE.MeshBasicMaterial({
       side: THREE.DoubleSide,
       map: this.monalisa,
-    })
+    });
 
     this.planoFrente.material = new THREE.MeshBasicMaterial({
       side: THREE.DoubleSide,
@@ -180,20 +177,20 @@ class Plano {
       map: this.chaoBase,
       normalScale: 1.5,
       normalMap: this.chaoNorm,
-    })
+    });
 
     this.planoDireita.material = new THREE.MeshLambertMaterial({
       //color: '#0a0826'
       color: "grey",
       map: this.o_grito,
       side: THREE.DoubleSide,
-    })
+    });
 
     this.planoEsquerda.material = new THREE.MeshLambertMaterial({
       side: THREE.DoubleSide,
       color: "grey",
       map: this.monalisa,
-    })
+    });
 
     this.planoFrente.material = new THREE.MeshLambertMaterial({
       side: THREE.DoubleSide,

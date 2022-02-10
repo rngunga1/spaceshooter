@@ -112,7 +112,7 @@ function createScene() {
   // Câmera que gira 360 a volta da cena
 
   camera360 = new THREE.PerspectiveCamera(
-    45,
+    60,
     window.innerWidth / window.innerHeight,
     1,
     7000
